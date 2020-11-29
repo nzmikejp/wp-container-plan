@@ -1,3 +1,9 @@
+        <?php echo do_shortcode('[section name="section-divider"]')?>
+        <?php echo do_shortcode('[section name="get-plans"]')?>
+        <?php echo do_shortcode('[section name="donate"]')?>
+
+        </main>
+        
         <footer>
             <div class="footer-upper">
                 <div class="grid-container">
@@ -41,12 +47,7 @@
                         <div class="cell-container">
                             <ul class="vertical menu">
                                 <li class="font-bold-uppercase">Subscribe to keep up to date...</li>
-                                <form action="#" id="form-subscribe">
-                                    <label for="input-subscribe">
-                                        <input type="email" name="input-subscribe" id="input-subscribe" placeholder="Your email...">
-                                    </label>
-                                    <input type="submit" class="button button-custom">
-                                </form>
+                                <li><?php echo do_shortcode('[contact-form-7 id="81" title="Subscribe"]')?></li>
                             </ul>
                         </div>
                     </div>

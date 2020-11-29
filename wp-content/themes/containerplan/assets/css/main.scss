@@ -19,12 +19,6 @@
 //--- Section Index
 .section-index {
     margin-top: 2em;
-    padding-bottom: 3em;
-
-    @include breakpoint-large {
-        padding-bottom: 6em;
-
-    }
 
     h1 {
         font-size: $headline-size-1-mob;
@@ -37,7 +31,19 @@
        
         @include breakpoint-large {
             font-size: $headline-size-1;
+        }
+    }
+
+    h2 {
+        font-size: $headline-size-3-mob;
+        text-align: center;
+
+        @include breakpoint-medium {
             text-align: left;
+        }
+        
+        @include breakpoint-large {
+            font-size: $headline-size-3;
         }
     }
 
@@ -106,13 +112,14 @@
 
     form {
         padding-top: 1em;
-        label {
+
+        .input-wrap {
             position: relative;
             width: 90%;
         }
 
         @include breakpoint-large {
-            label {
+            .input-wrap {
                 width: 100%;
             }
         }
@@ -228,9 +235,8 @@
 
 //--- Section Cta
 .section-cta {
-    .plan-content p {
-        padding-top: 1em;
-    }
+    padding-bottom: 8em;
+    
     .plan-mark {
         margin: 2em 0 3em 1em;
 
@@ -246,7 +252,7 @@
     form {
         padding-top: 1em;
 
-        label {
+        .input-wrap {
             position: relative;
             
             @include  breakpoint-medium {
@@ -270,6 +276,21 @@
     background: no-repeat $bg-gradient;
     min-height: 21.5em;
 
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 13em;
+        height: 8em;
+        background: center / contain no-repeat url('../img/x-tape.png');
+
+        @include breakpoint-large {
+            transform: translate(calc((-64em / 2) - 20%), -50%);
+        }
+    }
+
     .cell-content p{
         padding-top: 1em;
         color: $color-light;
@@ -277,7 +298,7 @@
 }
 
 //--- Why Containers Hero
-.section-why-containers {
+.section-with-mark {
     margin-top: 2em;
 
     h1 {

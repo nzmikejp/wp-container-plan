@@ -37,12 +37,7 @@
                 'menu_class' => 'menu'
                 )); 
             ?>
-            <!-- <ul class="menu">
-                <li><a class="active" href="/index.htm">Home</a></li>
-                <li><a href="/why-containers.htm">Why Containers</a></li>
-                <li><a href="/construction.htm">Construction</a></li>
-                <li><a href="/contact.htm">Contact</a></li>
-            </ul> -->
+            
         </nav>
     </header>
     <div class="mobile-nav-wrap">
@@ -54,10 +49,5 @@
             'menu_class' => 'menu vertical'
             )); 
         ?>
-        <!-- <ul class="vertical menu">
-            <li><a class="active" href="/index.htm">Home</a></li>
-            <li><a href="/why-containers.htm">Why Containers</a></li>
-            <li><a href="/construction.htm">Construction</a></li>
-            <li><a href="/contact.htm">Contact</a></li>
-        </ul> -->
+    
     </div>

@@ -227,7 +227,7 @@ footer {
     border-top: $border-thin-dark;
 
     .footer-upper {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 0 0;
         font-size: 0.9rem;
         background-color: $color-light;
 
@@ -323,11 +323,6 @@ footer {
         }
     }
 
-    .grid-x > div:last-child {
-        p {
-            padding: 0.4em;
-        }
-    }
 }
 
 //--- Overall Forms
@@ -341,6 +336,15 @@ form {
 
     input[type="submit"] {
         margin: $margin-y-1;
+    }
+
+    .input-wrap {
+        position: relative;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
     }
 }
 

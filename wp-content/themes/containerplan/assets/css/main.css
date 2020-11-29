@@ -305,7 +305,7 @@ footer {
 }
 
 footer .footer-upper {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
   font-size: 0.9rem;
   background-color: #fff;
 }
@@ -435,10 +435,6 @@ footer .footer-lower .menu li:not(:last-child) {
   }
 }
 
-footer .grid-x > div:last-child p {
-  padding: 0.4em;
-}
-
 form input[type="email"],
 form input[type="text"],
 form textarea {
@@ -448,6 +444,15 @@ form textarea {
 
 form input[type="submit"] {
   margin: 0.5rem 0;
+}
+
+form .input-wrap {
+  position: relative;
+}
+
+form p {
+  padding: 0;
+  margin: 0;
 }
 
 .section {
@@ -934,7 +939,7 @@ form input[type="submit"] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-5deg);
           transform: translate(-50%, -50%) rotate(-5deg);
-  background: center/contain no-repeat url("/assets/img/tape.png");
+  background: center/contain no-repeat url("../img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -948,7 +953,7 @@ form input[type="submit"] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-5deg);
           transform: translate(-50%, -50%) rotate(-5deg);
-  background: center/contain no-repeat url("/assets/img/tape.png");
+  background: center/contain no-repeat url("../img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -962,7 +967,7 @@ form input[type="submit"] {
   left: 50%;
   -webkit-transform: translate(-70%, 50%) rotate(10deg);
           transform: translate(-70%, 50%) rotate(10deg);
-  background: center/contain no-repeat url("/assets/img/tape.png");
+  background: center/contain no-repeat url("../img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -976,7 +981,7 @@ form input[type="submit"] {
   left: 0;
   -webkit-transform: translate(-30%, 20%) rotate(-40deg);
           transform: translate(-30%, 20%) rotate(-40deg);
-  background: center/contain no-repeat url("/assets/img/tape.png");
+  background: center/contain no-repeat url("../img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -990,7 +995,7 @@ form input[type="submit"] {
   right: 0;
   -webkit-transform: translate(30%, 30%) rotate(-25deg);
           transform: translate(30%, 30%) rotate(-25deg);
-  background: center/contain no-repeat url("/assets/img/tape.png");
+  background: center/contain no-repeat url("../img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -1336,13 +1341,6 @@ form input[type="submit"] {
 
 .section-index {
   margin-top: 2em;
-  padding-bottom: 3em;
-}
-
-@media (min-width: 64em) {
-  .section-index {
-    padding-bottom: 6em;
-  }
 }
 
 .section-index h1 {
@@ -1361,7 +1359,23 @@ form input[type="submit"] {
 @media (min-width: 64em) {
   .section-index h1 {
     font-size: 4.7rem;
+  }
+}
+
+.section-index h2 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .section-index h2 {
     text-align: left;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-index h2 {
+    font-size: 3.2rem;
   }
 }
 
@@ -1444,13 +1458,13 @@ form input[type="submit"] {
   padding-top: 1em;
 }
 
-.section-hero form label {
+.section-hero form .input-wrap {
   position: relative;
   width: 90%;
 }
 
 @media (min-width: 64em) {
-  .section-hero form label {
+  .section-hero form .input-wrap {
     width: 100%;
   }
 }
@@ -1564,8 +1578,8 @@ form input[type="submit"] {
   }
 }
 
-.section-cta .plan-content p {
-  padding-top: 1em;
+.section-cta {
+  padding-bottom: 8em;
 }
 
 .section-cta .plan-mark {
@@ -1588,12 +1602,12 @@ form input[type="submit"] {
   padding-top: 1em;
 }
 
-.section-cta form label {
+.section-cta form .input-wrap {
   position: relative;
 }
 
 @media (min-width: 40em) {
-  .section-cta form label {
+  .section-cta form .input-wrap {
     width: 90%;
   }
 }
@@ -1613,16 +1627,35 @@ form input[type="submit"] {
   min-height: 21.5em;
 }
 
+.section-donate:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 13em;
+  height: 8em;
+  background: center/contain no-repeat url("../img/x-tape.png");
+}
+
+@media (min-width: 64em) {
+  .section-donate:before {
+    -webkit-transform: translate(calc((-64em / 2) - 20%), -50%);
+            transform: translate(calc((-64em / 2) - 20%), -50%);
+  }
+}
+
 .section-donate .cell-content p {
   padding-top: 1em;
   color: #fff;
 }
 
-.section-why-containers {
+.section-with-mark {
   margin-top: 2em;
 }
 
-.section-why-containers h1 {
+.section-with-mark h1 {
   font-size: 3.5rem;
   -webkit-transition: ease-in-out 0.3s all;
   transition: ease-in-out 0.3s all;
@@ -1630,25 +1663,25 @@ form input[type="submit"] {
 }
 
 @media (min-width: 40em) {
-  .section-why-containers h1 {
+  .section-with-mark h1 {
     font-size: 4.7rem;
     text-align: left;
   }
 }
 
-.section-why-containers h2 {
+.section-with-mark h2 {
   font-size: 2.2rem;
   text-align: center;
 }
 
 @media (min-width: 40em) {
-  .section-why-containers h2 {
+  .section-with-mark h2 {
     font-size: 3.2rem;
     text-align: left;
   }
 }
 
-.section-why-containers .plan-mark {
+.section-with-mark .plan-mark {
   margin: 2em;
 }
 
