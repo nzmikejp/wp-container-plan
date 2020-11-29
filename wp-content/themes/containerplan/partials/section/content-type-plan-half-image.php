@@ -1,6 +1,6 @@
 <section class="section section-stacked-plans">
     <div class="grid-container">
-        <div class="plan full-img <?php the_field('tape_position')?>" data-aos="fade-up" data-aos-delay="150">
+        <div class="plan half-img <?php the_field('tape_position')?>" data-aos="fade-up">
             <div class="plan-border-wrap">
                 <div class="plan-border">
                     <div class="plan-border-details">
@@ -15,13 +15,13 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-x plan-content-wrap">
-                <div class="cell">
-                    <div class="plan-img img-right">
+            <div class="grid-x grid-padding-x plan-content">
+                <div class="cell large-6">
+                    <div class="plan-img">
                         <img src="<?php the_field('image')?>" alt="">
                     </div>
                 </div>
-                <div class="cell plan-content medium-9 large-8">
+                <div class="cell large-6">
                     <h2><?php the_title()?></h2>
                     <div>
                         <?php the_content()?>
