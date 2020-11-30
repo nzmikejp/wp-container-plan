@@ -1,16 +1,26 @@
 <section class="section section-gallery">
     <div class="grid-container">
         <ul class="grid effect-2" id="grid">
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-5.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-6.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-2.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-7.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-4.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-1.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-8.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-9.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-10.jpg" alt=""></li>
-            <li><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery/ci-11.jpg" alt=""></li>
+
+            <?php
+
+            $args = array('post_type' => 'gallery');
+            // The Query
+            $the_query = new WP_Query( $args );
+
+            // The Loop
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                get_template_part('partials/gallery/content', 'default');
+            }
+
+            /* Restore original Post Data */
+            wp_reset_postdata();
+
+            ?>
+
         </ul>
     </div>
 </section>
+
+<?php echo do_shortcode('[section-divider]')?>

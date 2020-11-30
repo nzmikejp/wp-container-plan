@@ -123,6 +123,14 @@
                 width: 100%;
             }
         }
+
+        .font-handwritten {
+            display: none;
+
+            @include breakpoint-custom(46) {
+                display: block;
+            }
+        }
     }
 
     .hero-img {
@@ -144,10 +152,17 @@
 
         
     }
+
+}
+
+.section-hero.home {
+    padding-bottom: 4em;
 }
 
 //--- Section Plan
 .section-plan {
+    z-index: 1;
+
     .plan-mark {
         margin: 2em 0 2em 1em;
 
@@ -159,7 +174,14 @@
 
 //--- Section About Plan
 .section-about-plan {
-    padding-top: 2em;
+    padding-top: 4em;
+
+    .cell-headline {
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 0.5em;
+        }
+    }
 
     .cell-header {
         display: flex;
@@ -236,6 +258,10 @@
 //--- Section Cta
 .section-cta {
     padding-bottom: 8em;
+
+    .plan-content {
+        padding-bottom: 5em;
+    }
     
     .plan-mark {
         margin: 2em 0 3em 1em;
@@ -263,7 +289,7 @@
         .font-handwritten {
             display: none;
 
-            @include breakpoint-medium {
+            @include breakpoint-custom(46) {
                 display: block;
             }
         }
@@ -403,7 +429,7 @@
 .section-about {
 
     @include breakpoint-large {
-        padding-bottom: 12em;
+        padding-bottom: 6em;
     }
 
     h2 {
@@ -475,15 +501,11 @@
 //--- Section Mail Form
 .section-mail-form {
     padding-top: 4em;
-    padding-bottom: 7em;
+    padding-bottom: 6em;
     @include transition(all);
 
     @include breakpoint-medium {
-        padding-bottom: 12em; 
-    }
-    
-    @include breakpoint-large {
-        padding-bottom: 15em; 
+        padding-bottom: 10em; 
     }
 
     form {

@@ -91,6 +91,14 @@
 
     <script src="<?php echo get_template_directory_uri()?>/assets/js/custom.js"></script>
 
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        });
+    </script>
+
     <?php wp_footer()?>
 </body>
 </html>

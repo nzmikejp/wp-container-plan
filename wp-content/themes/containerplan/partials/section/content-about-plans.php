@@ -1,5 +1,12 @@
 <section class="section section-about-plan">
     <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell-headline">
+                <h2 data-aos="fade-up"><?php the_title()?></h2>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
         <div class="grid-x grid-padding-x align-middle">
             <div class="cell large-6">
                 <div class="grid-x">
@@ -8,7 +15,6 @@
                             <h2 data-aos="fade-up" data-aos-delay="50" class="cell-number"><?php the_field('cell_1_number')?></h2>
                             <div class="cell-title">
                                 <h3 data-aos="fade-up" data-aos-delay="100"><?php the_field('cell_1_title')?></h3>
-                                <p class="h5" data-aos="fade-up" data-aos-delay="150"><?php the_field('cell_1_subtitle')?></p>
                             </div>
                         </div>
                         <div class="cell-content" data-aos="fade-up" data-aos-delay="200">
@@ -42,7 +48,6 @@
                             <h2 data-aos="fade-up" data-aos-delay="50" class="cell-number"><?php the_field('cell_2_number')?></h2>
                             <div class="cell-title">
                                 <h3 data-aos="fade-up" data-aos-delay="150"><?php the_field('cell_2_title')?></h3>
-                                <p class="h5" data-aos="fade-up" data-aos-delay="200"><?php the_field('cell_2_subtitle')?></p>
                             </div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="cell-content">

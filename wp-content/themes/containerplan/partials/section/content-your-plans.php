@@ -17,10 +17,10 @@
                 </div>
             </div>
             <div class="grid-x plan-content">
-                <div class="cell large-3">
+                <div class="cell large-4">
                     <h2><?php the_title()?></h2>
                 </div>
-                <div class="cell large-9">
+                <div class="cell large-8">
                     <?php the_content()?>
                 </div>
                 <div class="cell plan-mark top" id="mark-1">

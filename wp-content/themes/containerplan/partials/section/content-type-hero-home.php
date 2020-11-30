@@ -1,4 +1,4 @@
-<section class="section section-hero">
+<section class="section section-hero home">
     <div class="grid-container">
         <div class="grid-x align-middle">
             <div class="cell large-4">

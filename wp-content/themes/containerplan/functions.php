@@ -36,6 +36,13 @@ function register_resource() {
         'label'     => 'Slider Enterprise',
     );
     register_post_type( 'containerenterprise', $args );
+   
+    //--- Register Gallery ---//
+    $args = array(
+        'public'    => true,
+        'label'     => 'Gallery',
+    );
+    register_post_type( 'gallery', $args );
 
 
     //--- Shortcodes ---//
