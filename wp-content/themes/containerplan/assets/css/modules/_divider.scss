@@ -4,6 +4,15 @@
     box-shadow: $shadow-section;
     z-index: 2;
     min-height: 2em;
+    margin-top: 3em;
+
+    @include breakpoint-medium {
+        margin-top: 4em;
+    }
+    
+    @include breakpoint-large {
+        margin-top: 6em;
+    }
 
     &::after {
         content: '';

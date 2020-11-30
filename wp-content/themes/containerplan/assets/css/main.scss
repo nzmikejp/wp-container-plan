@@ -275,6 +275,7 @@
 .section-donate {
     background: no-repeat $bg-gradient;
     min-height: 21.5em;
+    padding-bottom: 3em;
 
     &:before {
         content: '';
@@ -330,15 +331,7 @@
 
 //--- Section Stacked Plan
 .section-stacked-plans {
-    padding-bottom: 6em;
-
-    & > div:not(:last-child) {
-        margin-bottom: 4em;
-    }
-
-    @include breakpoint-medium {
-        padding-bottom: 15em;
-    }
+    margin-top: 5em;
 }
 
 //--- Section Options

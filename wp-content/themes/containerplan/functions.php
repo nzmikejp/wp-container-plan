@@ -61,6 +61,17 @@ function register_resource() {
         return ob_get_clean();
     }
     add_shortcode( 'section-divider', 'sectionDivider_func' ); 
+    
+    //---[ruler]
+    function ruler_func( $atts ){
+
+        ob_start();
+
+        get_template_part('shortcode/ruler');
+
+        return ob_get_clean();
+    }
+    add_shortcode( 'ruler', 'ruler_func' ); 
 
     //---[section name=donate]
     //---[section name=get-plans]

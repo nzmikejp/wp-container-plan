@@ -1,4 +1,4 @@
-<section class="section section-stacked-plans">
+<section class="section-stacked-plans">
     <div class="grid-container">
         <div class="plan half-img <?php the_field('tape_position')?>" data-aos="fade-up">
             <div class="plan-border-wrap">

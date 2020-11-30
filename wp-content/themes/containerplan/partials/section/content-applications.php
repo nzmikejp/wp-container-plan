@@ -2,16 +2,6 @@
 
     $dimensionLeft = get_field('dimension_left').'%';
     $dimensionRight = get_field('dimension_right').'%';
-
-    $livingTitle = get_field('living_title');
-    $livingSubtitle = get_field('living_subtitle');
-    $livingContent1 = get_field('lcontent_1');
-    $livingContent2 = get_field('lcontent_2');
-    
-    $enterpriseTitle = get_field('enterprise_title');
-    $enterpriseSubtitle = get_field('enterprise_subtitle');
-    $enterpriseContent1 = get_field('econtent_1');
-    $enterpriseContent2 = get_field('econtent_2');
     
 ?>
 
@@ -42,6 +32,10 @@
 
                         <?php
 
+                        //reserve original post
+                        global $post;
+                        $preserve_post = get_post();
+
                         $args = array('post_type' => 'containerliving');
                         // The Query
                         $the_query = new WP_Query( $args );
@@ -54,7 +48,11 @@
 
                         /* Restore original Post Data */
                         wp_reset_postdata();
-
+                  
+                        //reinstate original post
+                        $post = $preserve_post;
+                        setup_postdata( $post );
+                    
                         ?>
 
                     </div>
@@ -63,16 +61,16 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="card-headline">
-                    <h3 data-aos="fade-up"><?php echo $livingTitle?></h3>
-                    <p class="h3" data-aos="fade-up" data-aos-delay="50"><?php echo $livingSubtitle?></p>
+                    <h3 data-aos="fade-up"><?php the_field('living_title')?></h3>
+                    <p class="h3" data-aos="fade-up" data-aos-delay="50"><?php the_field('living_subtitle')?></p>
                 </div>
                 <div class="card-content">
                     <div class="grid-x grid-margin-x">
                         <div class="cell medium-6" data-aos="fade-up" data-aos-delay="100">
-                            <?php echo $livingContent1?> 
+                            <?php the_field('lcontent_1')?> 
                         </div>
                         <div class="cell medium-6" data-aos="fade-up" data-aos-delay="150">
-                            <?php echo $livingContent2?> 
+                            <?php the_field('lcontent_2')?> 
                         </div>
                     </div>
                 </div>
@@ -88,6 +86,10 @@
 
                         <?php
 
+                        //reserve original post
+                        global $post;
+                        $preserve_post = get_post();
+
                         $args = array('post_type' => 'containerenterprise');
                         // The Query
                         $the_query = new WP_Query( $args );
@@ -101,6 +103,10 @@
                         /* Restore original Post Data */
                         wp_reset_postdata();
 
+                        //reinstate original post
+                        $post = $preserve_post;
+                        setup_postdata( $post );
+
                         ?>
 
                     </div>
@@ -109,16 +115,16 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="card-headline">
-                    <h3 data-aos="fade-up"><?php echo $enterpriseTitle?></h3>
-                    <p class="h3" data-aos="fade-up" data-aos-delay="50"><?php echo $enterpriseSubtitle?></p>
+                    <h3 data-aos="fade-up"><?php the_field('enterprise_title')?></h3>
+                    <p class="h3" data-aos="fade-up" data-aos-delay="50"><?php the_field('enterprise_subtitle')?></p>
                 </div>
                 <div class="card-content">
                     <div class="grid-x grid-margin-x">
                         <div class="cell medium-6" data-aos="fade-up" data-aos-delay="100">
-                            <?php echo $enterpriseContent1?> 
+                            <?php the_field('econtent_1')?> 
                         </div>
                         <div class="cell medium-6" data-aos="fade-up" data-aos-delay="150">
-                            <?php echo $enterpriseContent2?> 
+                            <?php the_field('econtent_2')?> 
                         </div>
                     </div>
                 </div>

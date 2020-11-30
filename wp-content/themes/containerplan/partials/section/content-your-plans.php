@@ -1,4 +1,3 @@
-<?php echo do_shortcode('[section-divider]')?>
 
 <section class="section section-plan">
     <div class="grid-container">

@@ -457,20 +457,14 @@ form p {
 
 .section {
   position: relative;
-  padding: 6em 0 3em 0;
+  padding: 6em 0 0 0;
   background-color: #fff;
   min-height: 5em;
 }
 
-@media (min-width: 40em) {
-  .section {
-    padding: 6em 0 4em 0;
-  }
-}
-
 @media (min-width: 64em) {
   .section {
-    padding: 7em 0 8em 0;
+    padding: 7em 0 0 0;
   }
 }
 
@@ -608,6 +602,19 @@ form p {
           box-shadow: 0 0.7em 0.7em rgba(0, 0, 0, 0.05);
   z-index: 2;
   min-height: 2em;
+  margin-top: 3em;
+}
+
+@media (min-width: 40em) {
+  .divider {
+    margin-top: 4em;
+  }
+}
+
+@media (min-width: 64em) {
+  .divider {
+    margin-top: 6em;
+  }
 }
 
 .divider::after {
@@ -1625,6 +1632,7 @@ form p {
 .section-donate {
   background: no-repeat radial-gradient(44.76% 159.77% at 21.48% 0%, #525050 0%, #363131 100%);
   min-height: 21.5em;
+  padding-bottom: 3em;
 }
 
 .section-donate:before {
@@ -1686,17 +1694,7 @@ form p {
 }
 
 .section-stacked-plans {
-  padding-bottom: 6em;
-}
-
-.section-stacked-plans > div:not(:last-child) {
-  margin-bottom: 4em;
-}
-
-@media (min-width: 40em) {
-  .section-stacked-plans {
-    padding-bottom: 15em;
-  }
+  margin-top: 5em;
 }
 
 .section-options h1 {
