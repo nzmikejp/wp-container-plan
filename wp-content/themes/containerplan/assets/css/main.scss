@@ -326,7 +326,7 @@
 
 //--- Why Containers Hero
 .section-with-mark {
-    margin-top: 2em;
+    margin-top: 6em;
 
     h1 {
         font-size: $headline-size-1-mob;
@@ -352,6 +352,33 @@
 
     .plan-mark {
         margin: 2em;
+    }
+}
+
+.section-standard {
+    margin: 2em 0;
+
+    h1 {
+        font-size: $headline-size-1-mob;
+        @include transition(all);
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-1;
+            text-align: left;
+        }
+    }
+
+    h2 {
+        font-size: $headline-size-3-mob;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-3;
+            text-align: left;
+
+        }
     }
 }
 
@@ -427,9 +454,11 @@
 
 //--- Section About
 .section-about {
+    padding-top: 8em;
 
     @include breakpoint-large {
         padding-bottom: 6em;
+        padding-top: 12em;
     }
 
     h2 {
@@ -474,7 +503,7 @@
     h1 {
         font-size: $headline-size-2-mob;
         @include transition(all);
-        text-align: center;
+        text-align: left;
 
         @include breakpoint-medium {
             font-size: $headline-size-2;
@@ -484,13 +513,17 @@
 
     h2 {
         font-size: $headline-size-5-mob;
-        text-align: center;
+        text-align: left;
 
         @include breakpoint-medium {
             font-size: $headline-size-5;
             text-align: left;
 
         }
+    }
+
+    .cell-content {
+        margin-top: 1em;
     }
 
     .plan-mark {
@@ -511,4 +544,9 @@
     form {
        margin-bottom: 2em; 
     }
+}
+
+//--- Gallery
+.section-gallery {
+    padding-top: 3em;
 }

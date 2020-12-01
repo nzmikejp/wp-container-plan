@@ -19,6 +19,7 @@
             <div class="grid-x plan-content">
                 <div class="cell large-4">
                     <h2><?php the_title()?></h2>
+                    <h3 class="h3"><?php the_field('subtitle')?></h3>
                 </div>
                 <div class="cell large-8">
                     <?php the_content()?>

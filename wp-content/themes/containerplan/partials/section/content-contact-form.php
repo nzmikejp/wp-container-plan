@@ -10,9 +10,15 @@
                     </div>
                 </div>
             </div>
-            <div class="cell large-auto">
+            <div class="cell large-10">
                 <h1 data-aos="fade-up"><?php the_title()?></h1>
                 <h2 class="h2" data-aos="fade-up" data-aos-delay="50"><?php the_field('subtitle')?></h2>
+            </div>
+            <div class="cell large-8 large-offset-2 cell-content" data-aos="fade-up" data-aos-delay="100">
+                <?php the_content()?>
+            </div>
+            <div class="coffee-stain">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/coffee-stain.png" alt="">
             </div>
         </div>
     </div>

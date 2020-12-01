@@ -1,5 +1,31 @@
 <?php
 
+function enqueue_function() {
+
+    //--- CSS ---//
+    wp_enqueue_style ( 'swiper','https://unpkg.com/swiper/swiper-bundle.min.css' );
+    wp_enqueue_style ( 'aos','https://unpkg.com/aos@2.3.1/dist/aos.css' );
+    wp_enqueue_style ( 'foundation','https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css' );
+    wp_enqueue_style ( 'main', get_template_directory_uri().'/assets/css/main.css' );
+    wp_enqueue_style ( 'my-style', get_stylesheet_uri() );
+
+    //--- JS ---//
+    wp_enqueue_script( 'modernizr', get_template_directory_uri().'/assets/js/modernizr.custom.js', array(), '1.0.0', false );
+    wp_enqueue_script( 'gsap','https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'gsap-scrollTo','https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'gsap-scrollTrigger','https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'masonry', get_template_directory_uri().'/assets/js/masonry.pkgd.min.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'imagesLoaded', get_template_directory_uri().'/assets/js/imagesloaded.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'classie', get_template_directory_uri().'/assets/js/classie.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'animOnScroll', get_template_directory_uri().'/assets/js/AnimOnScroll.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'swiper','https://unpkg.com/swiper/swiper-bundle.min.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'foundation','https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '1.0.0', true ); 
+    wp_enqueue_script( 'custom', get_template_directory_uri().'/assets/js/custom.js', array('jquery'), '1.0.0', true ); 
+
+}
+add_action('wp_enqueue_scripts', 'enqueue_function');
+
 function register_resource() {
     register_nav_menu('main-menu', 'Main Menu');
     register_nav_menu('footer-menu-about', 'Footer Menu About');

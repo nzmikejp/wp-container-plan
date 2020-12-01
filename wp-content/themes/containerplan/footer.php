@@ -70,26 +70,9 @@
             </div>
         </footer>
     </div>
+    
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/masonry.pkgd.min.js"></script>
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/imagesloaded.js"></script>
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/classie.js"></script>
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/AnimOnScroll.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/custom.js"></script>
+    <?php wp_footer()?>
 
     <script>
         new AnimOnScroll( document.getElementById( 'grid' ), {
@@ -98,7 +81,5 @@
             viewportFactor : 0.2
         });
     </script>
-
-    <?php wp_footer()?>
 </body>
 </html>

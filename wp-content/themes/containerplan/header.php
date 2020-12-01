@@ -9,14 +9,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri()?>/favicon-16x16.png">
     <link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/main.css">
-
-    <script src="<?php echo get_template_directory_uri()?>/assets/js/modernizr.custom.js"></script>
-
     <title>Containerplan</title>
 
     <?php wp_head()?>
