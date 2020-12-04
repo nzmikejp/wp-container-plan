@@ -2,12 +2,26 @@
 (function($){
     $(function(){
 
-        //--- AOS
-        AOS.init({
-            easing: 'ease-in-out-quad',
-            duration: 600,
-            once: true,
-        });
+        if(document.getElementById( 'grid' )){
+		   
+            new AnimOnScroll( document.getElementById( 'grid' ), {
+                minDuration : 0.4,
+                maxDuration : 0.7,
+                viewportFactor : 0.2
+            });
+
+        }
+
+
+
+        setTimeout(function(){
+            AOS.init({
+                easing: 'ease-in-out-quad',
+                duration: 600,
+                once: true,
+            })
+        },500)
+        
         
         //--- Menu Button
         var isOpen = false
